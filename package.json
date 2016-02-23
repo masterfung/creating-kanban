@@ -1,15 +1,21 @@
 {
-  "name": "kanban",
+  "name": "kanban-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "ES6",
+    "React"
+  ],
+  "author": "Tsung Hung",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.7.3"
   }
 }
