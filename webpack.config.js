@@ -37,6 +37,11 @@ const common = {
           'babel?cacheDirectory,presets[]=react,presets[]=es2015,presets[]=survivejs-kanban'
         ],
         include: PATHS.app
+      },
+      // SASS
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
       }
     ]
   }
