@@ -2,12 +2,13 @@ import AltContainer from 'alt-container';
 
 import React from 'react';
 import Header from './Header';
-import Notes from './Notes.jsx';
-import NoteActions from '../actions/NoteActions';
-import NoteStore from '../stores/NoteStore';
+
+
+import Lanes from './Lanes';
+import LaneStore from '../stores/LaneStore';
+import LaneActions from '../actions/LaneActions';
 
 export default class App extends React.Component {
-
   render() {
     return (
       <div>
@@ -17,32 +18,36 @@ export default class App extends React.Component {
             onClick={this.addNote}
             className='btn-large'>Add
           </button>
+
           <AltContainer
-            stores={[NoteStore]}
+            stores={[LaneStore]}
             inject={{
-              notes: () => NoteStore.getState().notes
+              lanes: () => LaneStore.getState().lanes || []
             }}
           >
-            <Notes onEdit={this.editNote} onDelete={this.deleteNote} />
+            <Lanes />
           </AltContainer>
         </div>
 
       </div>
     )
   }
-  addNote(){
-    NoteActions.create({task: 'New Task'});
+  addLane() {
+    LaneActions.create({name: 'New lane'});
   }
-
-  deleteNote(id) {
-    NoteActions.delete(id);
-  }
-
-  editNote(id, task) {
-    if(!task.trim()) {
-      return;
-    }
-
-    NoteActions.update({id, task})
-  }
+  // addNote(){
+  //   NoteActions.create({task: 'New Task'});
+  // }
+  //
+  // deleteNote(id) {
+  //   NoteActions.delete(id);
+  // }
+  //
+  // editNote(id, task) {
+  //   if(!task.trim()) {
+  //     return;
+  //   }
+  //
+  //   NoteActions.update({id, task})
+  // }
 }
