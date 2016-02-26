@@ -1,8 +1,7 @@
 import AltContainer from 'alt-container';
-
 import React from 'react';
-import Header from './Header';
 
+import Header from './Header';
 
 import Lanes from './Lanes';
 import LaneStore from '../stores/LaneStore';
@@ -14,10 +13,6 @@ export default class App extends React.Component {
       <div>
         <Header />
         <div className="container kanban-app">
-          <button
-            onClick={this.addNote}
-            className='btn-large'>Add
-          </button>
 
           <AltContainer
             stores={[LaneStore]}
@@ -31,9 +26,6 @@ export default class App extends React.Component {
 
       </div>
     )
-  }
-  addLane() {
-    LaneActions.create({name: 'New lane'});
   }
   // addNote(){
   //   NoteActions.create({task: 'New Task'});
