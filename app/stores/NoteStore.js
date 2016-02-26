@@ -7,15 +7,24 @@ class NoteStore {
     this.bindActions(NoteActions);
 
     this.notes = [];
+
+    this.exportPublicMethods({
+      getNotesByIds: this.getNotesByIds.bind(this)
+    });
   }
 
   create(note) {
     const notes = this.notes;
 
     note.id = uuid.v4();
+
     this.setState({
       notes: notes.concat(note)
     });
+
+
+    return note;
+
   }
 
   update(updatedNote){
@@ -33,6 +42,11 @@ class NoteStore {
     this.setState({
       notes: this.notes.filter(note => note.id !== id)
     })
+  }
+  getNotesByIds(ids) {
+    return (ids || []).map(
+      id => this.notes.filter(note => note.id === id)
+    ).filter(a => a.length).map(a => a[0]);
   }
 }
 
