@@ -27,19 +27,4 @@ export default class App extends React.Component {
       </div>
     )
   }
-  // addNote(){
-  //   NoteActions.create({task: 'New Task'});
-  // }
-  //
-  // deleteNote(id) {
-  //   NoteActions.delete(id);
-  // }
-  //
-  // editNote(id, task) {
-  //   if(!task.trim()) {
-  //     return;
-  //   }
-  //
-  //   NoteActions.update({id, task})
-  // }
 }
