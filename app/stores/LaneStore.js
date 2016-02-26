@@ -8,6 +8,7 @@ class LaneStore {
 
     this.lanes = [];
   }
+
   create(lane) {
     const lanes = this.lanes;
 
@@ -18,7 +19,13 @@ class LaneStore {
       lanes: lanes.concat(lane)
     });
   }
+
   attachToLane({laneId, noteId}) {
+    if (!noteId) {
+      this.waitFor(NoteStore);
+      noteId = NoteStore.getState().notes.slice(-1)[0].id;
+    }
+
     const lanes = this.lanes.map(lane => {
       if(lane.id === laneId) {
         if(lane.notes.includes(noteId)) {
@@ -34,6 +41,23 @@ class LaneStore {
 
     this.setState({lanes});
   }
+
+  delete(id) {
+    this.setState({
+      lanes: this.lanes.filter(lane => lane.id !== id)
+    })
+  }
+
+  update(updatedLane) {
+    const lanes = this.lanes.map(lane => {
+      if(lane.id === updatedLane.id) {
+        return Object.assign({}, lane, updatedLane);
+      }
+      return lane;
+    });
+    return this.setState({lanes})
+  }
+
   detachFromLane({laneId, noteId}) {
     const lanes = this.lanes.map(lane => {
       if(lane.id === laneId) {
