@@ -6,7 +6,8 @@ export default ({notes, onValueClick, onEdit, onDelete}) => {
   return (
     <ul className="notes">{notes.map(note =>
       <Note className="note" id={note.id}
-        key={note.id}>
+        key={note.id} onMove={({sourceId, targetId}) =>
+      console.log('Source: ${sourceId}, target: ${targetId}')}>
         <Editable
             editing={note.editing}
             value={note.task}
