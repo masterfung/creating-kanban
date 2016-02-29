@@ -1,9 +1,8 @@
 import AltContainer from 'alt-container';
 import React from 'react';
-
 import {DropTarget} from 'react-dnd';
-import ItemTypes from '../constants/ItemTypes';
 
+import ItemTypes from '../constants/ItemTypes';
 import Notes from './Notes.jsx';
 import NoteActions from '../actions/NoteActions';
 import NoteStore from '../stores/NoteStore';
@@ -17,9 +16,9 @@ const noteTarget = {
 
     if(!targetProps.lane.notes.length) {
       LaneActions.attachToLane({
-        laneId:targetProps.lane.id,
+        laneId: targetProps.lane.id,
         noteId: sourceId
-      })
+      });
     }
   }
 }

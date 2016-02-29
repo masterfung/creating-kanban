@@ -22,15 +22,12 @@ class LaneStore {
   }
 
   attachToLane({laneId, noteId}) {
-    if (!noteId) {
-      this.waitFor(NoteStore);
-      noteId = NoteStore.getState().notes.slice(-1)[0].id;
-    }
-
     const lanes = this.lanes.map(lane => {
+
       if(lane.notes.includes(noteId)) {
         lane.notes = lane.notes.filter(note => note !== noteId);
       }
+
 
       if(lane.id === laneId) {
         if(lane.notes.includes(noteId)) {
