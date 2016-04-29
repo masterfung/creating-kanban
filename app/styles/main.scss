@@ -1,11 +1,22 @@
+.Site {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ .Site-content {
+   flex: 1;
+ }
+
 .nav-wrapper {
-  background-color: #1e3547;
+  background-color: #3b5998;
 }
 
 .delete-note {
   position: absolute;
   right: 0;
 }
+
 .note-container {
   padding: 20px 0;
 }
@@ -30,7 +41,7 @@
   overflow: auto;
   padding: 1em;
   color: #fff;
-  background-color: #333;
+  background-color: #000000;
 
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
@@ -69,6 +80,10 @@
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #ccc;
+
+  &:hover {
+    font-size: 1.2em;
+  }
 }
 
 .notes {
@@ -111,4 +126,9 @@
 
     visibility: hidden;
   }
+}
+
+footer.page-footer {
+  padding-top: 0;
+  background-color: #3b5998; 
 }
