@@ -4,6 +4,7 @@ import {DragDropContext} from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
 import Header from './Header';
+import Footer from './Footer';
 
 import Lanes from './Lanes';
 import LaneStore from '../stores/LaneStore';
@@ -15,18 +16,22 @@ export default class App extends React.Component {
     return (
       <div>
         <Header />
-        <div className="container kanban-app">
+        <body className="Site">
+          <main className="Site-content">
+            <div className="container kanban-app">
 
-          <AltContainer
-            stores={[LaneStore]}
-            inject={{
-              lanes: () => LaneStore.getState().lanes || []
-            }}
-          >
-            <Lanes />
-          </AltContainer>
-        </div>
-
+              <AltContainer
+                stores={[LaneStore]}
+                inject={{
+                  lanes: () => LaneStore.getState().lanes || []
+                }}
+              >
+                <Lanes />
+              </AltContainer>
+            </div>
+          </main>
+        </body>
+        <Footer />
       </div>
     )
   }
