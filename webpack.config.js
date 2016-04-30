@@ -44,7 +44,14 @@ const common = {
         loader: 'style!css!sass'
       }
     ]
-  }
+  },
+  plugins: [
+  new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify('production')
+    }
+  })
+  ]
 }
 
 if (TARGET === 'start' || !TARGET) {
