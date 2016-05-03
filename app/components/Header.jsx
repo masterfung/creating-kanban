@@ -8,8 +8,9 @@ export default class Header extends React.Component {
         <div className="nav-wrapper">
           <a href="#" className="brand-logo">I Kan Band</a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li><a href='#' onClick={this.addLane}
-            className='btn red darken-2'>Add Lane</a>
+            <li>
+              <a href='#' onClick={this.addLane}
+              className='btn red darken-2'>Add Lane</a>
             </li>
           </ul>
         </div>
