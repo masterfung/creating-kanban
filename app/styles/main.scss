@@ -20,6 +20,7 @@ $dark-header-green: #0C800C;
 
  .Site-content {
    flex: 1;
+   background-color: #eeeeee;
  }
 
 .nav-wrapper {
@@ -41,7 +42,6 @@ $dark-header-green: #0C800C;
 
 .lane {
   display: inline-block;
-
   margin: 1em;
 
   background-color: #efefef;
@@ -149,8 +149,19 @@ $dark-header-green: #0C800C;
 footer.page-footer {
   padding-top: 0;
   background-color: #3b5998;
+  margin-top: 0;
 }
 
 .button-transparent {
   background-color: tra
+}
+
+.notes-empty {
+  font-weight: 400;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
 }
