@@ -5,7 +5,7 @@ export default ({lanes}) => {
   return (
     <div className="lanes">
       {lanes.map(lane =>
-      <Lane className="lane"
+      <Lane className="lane z-depth-3"
         key={lane.id}
         lane={lane} />
     )}

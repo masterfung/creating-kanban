@@ -10,7 +10,7 @@ export default class Editable extends React.Component {
       </div>
     );
   }
-  
+
   renderEdit = () => {
     return <input type="text"
       ref={
@@ -34,9 +34,8 @@ export default class Editable extends React.Component {
   }
 
   renderDelete = () => {
-    return <button
-      className="delete"
-      onClick={this.props.onDelete}>x</button>;
+    return <i onClick={this.props.onDelete}
+    className="delete material-icons">close</i>
   }
 
   checkEnter = (e) => {
