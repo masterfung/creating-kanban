@@ -16,7 +16,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header />
-        <body className="Site">
+        <div className="Site">
           <main className="Site-content">
             <div className="container kanban-app">
 
@@ -30,7 +30,7 @@ export default class App extends React.Component {
               </AltContainer>
             </div>
           </main>
-        </body>
+        </div>
         <Footer />
       </div>
     )

@@ -3,11 +3,11 @@ import React from 'react';
 import {DropTarget} from 'react-dnd';
 
 import ItemTypes from '../constants/ItemTypes';
-import Notes from './Notes.jsx';
+import Notes from './Notes.js';
 import NoteActions from '../actions/NoteActions';
 import NoteStore from '../stores/NoteStore';
 import LaneActions from '../actions/LaneActions';
-import Editable from './Editable.jsx';
+import Editable from './Editable.js';
 
 const noteTarget = {
   hover(targetProps, monitor) {
