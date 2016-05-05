@@ -4,6 +4,11 @@
 $main-blue: #3b5998;
 $note-container-color: #8BE08B;
 $dark-header-green: #0C800C;
+$white: #ffffff;
+$red: #ff0000;
+$lightGrey: #eeeeee;
+$midLightGrey: #efefef;
+$midGrey: #cccccc;
 
 // Mixins
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
@@ -20,7 +25,7 @@ $dark-header-green: #0C800C;
 
  .Site-content {
    flex: 1;
-   background-color: #eeeeee;
+   background-color: $lightGrey;
  }
 
 .nav-wrapper {
@@ -36,16 +41,13 @@ $dark-header-green: #0C800C;
   padding: 20px 0;
   background-color: $note-container-color;
 }
-.kanban-app {
-  margin-top: 25px;
-}
 
 .lane {
   display: inline-block;
   margin: 1em;
-
-  background-color: #efefef;
-  border: 1px solid #ccc;
+  width: 45%;
+  background-color: $midLightGrey;
+  border: 1px solid $midGrey;
   border-radius: 0.5em;
 
   min-width: 10em;
@@ -55,7 +57,7 @@ $dark-header-green: #0C800C;
 .lane-header {
   overflow: auto;
   padding: 1em;
-  color: #fff;
+  color: $white;
   background-color: $dark-header-green;
 
   border-top-left-radius: 0.5em;
@@ -63,7 +65,7 @@ $dark-header-green: #0C800C;
 
   &:hover .lane-delete {
     visibility: visible;
-    color: red;
+    color: $red;
     cursor: pointer;
   }
 }
@@ -86,7 +88,7 @@ $dark-header-green: #0C800C;
   button {
     padding: 0;
     cursor: pointer;
-    color: white;
+    color: $white;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
   }
@@ -95,12 +97,12 @@ $dark-header-green: #0C800C;
 .add-lane, .lane-add-note button {
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid $white;
   border-radius: 100%;
 
   &:hover {
-    background-color: red;
-    border: 1px solid red;
+    background-color: $red;
+    border: 1px solid $red;
   }
 }
 
@@ -115,8 +117,9 @@ $dark-header-green: #0C800C;
   margin-bottom: 0.5em;
   padding: 0.5em;
   max-width: 100%;
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 0 0 0.3em .03em rgba(0,0,0,.3);
+  position: relative;
 
   &:hover {
     box-shadow: 0 0 0.3em .03em rgba(0,0,255,.7);
@@ -125,7 +128,7 @@ $dark-header-green: #0C800C;
 
     .delete {
       visibility: visible;
-      color: red;
+      color: $red;
     }
   }
   .value {
@@ -137,7 +140,7 @@ $dark-header-green: #0C800C;
 
     padding: 0;
 
-    background-color: #fff;
+    background-color: $white;
     border: none;
 
     cursor: pointer;
@@ -148,17 +151,17 @@ $dark-header-green: #0C800C;
 
 footer.page-footer {
   padding-top: 0;
-  background-color: #3b5998;
+  background-color: $main-blue;
   margin-top: 0;
 }
 
 .button-transparent {
-  background-color: tra
+  background-color: transparent;
 }
 
 .notes-empty {
   font-weight: 400;
-  color: #ffffff;
+  color: $white;
   font-style: italic;
 }
 
