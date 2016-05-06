@@ -1,25 +1,20 @@
 import React from 'react';
-import AppBar from 'material-ui/lib/app-bar';
-import FlatButton from 'material-ui/lib/flat-button';
-// import RaisedButton from 'material-ui/lib/raised-button';
 import LaneActions from '../actions/LaneActions';
-
-const styles = {
-  title: {
-    cursor: 'pointer'
-  }
-}
 
 export default class Header extends React.Component {
   render() {
     return (
-      <AppBar
-        title={<span style={styles.title}>I Kan Band</span>}
-        iconElementRight={
-          <FlatButton primary={true}
-          onClick={this.addLane}
-          label="New Lane" />}
-      />
+      <nav>
+        <div className="nav-wrapper">
+          <a href="#" className="brand-logo">I Kan Band</a>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li>
+              <a href='#' onClick={this.addLane}
+              className='btn red darken-2'>New Lane</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     )
   }
   addLane() {
