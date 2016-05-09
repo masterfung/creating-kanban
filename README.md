@@ -3,10 +3,11 @@ I Kan Band
 
 ###Overview
 
-I Kan Band is a react-powered application that utilizes ES6, Webpack, Flux
-to create lanes and tasks. Each tasks can be dragged from one lane to another
-and are easily editable. The current application uses localStorage to persist
-but will work towards using a DB in the near future.
+I Kan Band is a react-powered application that utilizes ES6, Babel, Webpack, Flux to create lanes and tasks. Each tasks can be dragged from one lane to another and are easily editable. The current application uses localStorage to persist but will work towards using a DB in the near future.
+
+###App Improvement Roadmap
+
+I Kan Band has a lot of great venue for where it can go next. One of my goals is to allow individuals to do all productivity related activities in this app. What that will entail is the ability to construct new drawing, draft new notes, write up code, make to-dos, and prioritize tasks.
 
 
 ###Installation
