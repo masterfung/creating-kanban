@@ -21,3 +21,4 @@ Once everything is installed, run:
 `npm start` and go to `localhost:3000`
 
 ###Bug Reporting
+If there are any improvement please submit a pull request. If there is a bug, please create a ticket and I will try to get to it.
